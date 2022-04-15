@@ -9,7 +9,7 @@ A proof of concept project to show how do a flashloan with NFTs. Loosely based o
 4. A borrower can temporary move a token to their wallet
 
 ## Interfaces
-###[IERC721FlashLoanFacilitator.sol](./contracts/IERC721FlashLoanFacilitator.sol)
+### [IERC721FlashLoanFacilitator.sol](./contracts/IERC721FlashLoanFacilitator.sol)
 ```solidity
 interface IERC721FlashLoanFacilitator {
     /**
@@ -31,7 +31,7 @@ interface IERC721FlashLoanFacilitator {
 }
 ```
 
-###[IERC721FlashLoan.sol](./contracts/IERC721FlashLoan.sol)
+### [IERC721FlashLoan.sol](./contracts/IERC721FlashLoan.sol)
 ```solidity
 interface IERC721FlashLoan {
     /**
