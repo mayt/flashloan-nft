@@ -10,7 +10,7 @@ contract NFTWithRedeemable is ERC721 {
     }
 
     function redeemTicket(uint256 id) external {
-        require(ownerOf(id) == tx.origin, "Tx origin is not the owner of this tokemn");
+        require(ownerOf(id) == tx.origin, "Tx origin is not the owner of this token");
         require(_tickets[id] == address(0), "Ticket has been claimed");
         _tickets[id] = tx.origin;
     }

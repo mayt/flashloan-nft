@@ -63,7 +63,7 @@ contract FlashLoanNFT is IERC721FlashLoan {
         address _lender = _contract.ownerOf(tokenId);
         require(
             _contract.isApprovedForAll(_lender, address(this)),
-            "Owner has not approved contract's setApprovedForAll"
+            "Lender has not approved contract's setApprovedForAll"
         );
 
         uint256 premium = contractNFTPremium[erc721Contract][_lender][tokenId];
@@ -93,7 +93,7 @@ contract FlashLoanNFT is IERC721FlashLoan {
         payable(_lender).transfer(premium);
 
         // confirm that the nft was returned
-        require(_contract.ownerOf(tokenId) == _lender, "Wrong owner");
+        require(_contract.ownerOf(tokenId) == _lender, "NFT was not returned to lender");
 
         emit ERC721FlashLoan(
             facilitatorAddress,
