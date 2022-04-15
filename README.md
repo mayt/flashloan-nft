@@ -80,3 +80,8 @@ npm install
 ```cmd
 npm test
 ```
+
+## Deloying the FlashLoanNFT contract
+```cmd
+npx hardhat deploy
+```

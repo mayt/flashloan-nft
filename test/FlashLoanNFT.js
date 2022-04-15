@@ -7,11 +7,9 @@ describe("FlashLoanNFT contract", function () {
   let nftContract;
   let owner;
   let addr1;
-  let addr2;
-  let addrs;
 
   beforeEach(async function () {
-    [owner, addr1, addr2, ...addrs] = await ethers.getSigners();
+    [owner, addr1, ...addrs] = await ethers.getSigners();
 
     const FlashLoanNFT = await ethers.getContractFactory("FlashLoanNFT");
     flashLoanNFT = await FlashLoanNFT.deploy();

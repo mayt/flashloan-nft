@@ -15,7 +15,7 @@ interface IERC721FlashLoan {
 
     /**
      * @dev Allows the msg.sender access to an approved NFT through a smartcontract within one transaction,
-     * @param _facilitatorAddress The address of the contract implementing the IERC721FlashLoanFacilitator interface
+     * @param _facilitatorContract The address of the contract implementing the IERC721FlashLoanFacilitator interface
      * @param _tokenContract The addresses of the ERC721 contract to loan
      * @param _tokenId The NFT token id to loan
      * @param _params Variadic packed params to pass to the receiver as extra information

@@ -21,7 +21,7 @@ task("deploy", "Deploy the contract").setAction(
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
     const FlashLoanNFT = await ethers.getContractFactory("FlashLoanNFT");
-    const flashLoanNFT = await FlashLoanNFT.deploy(deployer.address);
+    const flashLoanNFT = await FlashLoanNFT.deploy();
     await flashLoanNFT.deployed();
 
     console.log("FlashLoanNFT address:", flashLoanNFT.address);
